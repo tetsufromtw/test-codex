@@ -14,7 +14,10 @@
     @apply px-4 py-2 rounded-md text-white font-medium inline-flex items-center justify-center;
   }
   .button-primary {
-    @apply bg-blue-550 hover:bg-blue-600;
+    background-color: #0085D5;
+  }
+  .button-primary:hover {
+    background-color: #0075BB;
   }
   .button-danger {
     @apply bg-red-550 hover:bg-red-600;
