@@ -1,13 +1,27 @@
-import type { FC } from 'react'
+import type { FC } from 'react';
 
 interface Props {
-  message: string
-  variant: 'success' | 'error'
+  message: string;
+  variant: 'success' | 'error' | 'info';
 }
 
 const Toast: FC<Props> = ({ message, variant }) => {
-  const className = variant === 'success' ? 'bg-blue-550' : 'bg-red-550'
-  return <div className={`text-white px-4 py-2 rounded-md ${className}`}>{message}</div>
-}
+  const colorClass =
+    variant === 'success'
+      ? 'bg-blue-550'
+      : variant === 'error'
+        ? 'bg-red-550'
+        : 'bg-blue-500';
+  const icon = variant === 'success' ? '✔️' : variant === 'error' ? '❌' : 'ℹ️';
 
-export default Toast
+  return (
+    <div
+      className={`text-white px-4 py-2 rounded-md flex items-center gap-2 ${colorClass}`}
+    >
+      <span>{icon}</span>
+      <span>{message}</span>
+    </div>
+  );
+};
+
+export default Toast;
