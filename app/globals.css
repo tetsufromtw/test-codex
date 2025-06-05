@@ -20,10 +20,17 @@
     background-color: #0075BB;
   }
   .button-danger {
-    @apply bg-red-550 hover:bg-red-600;
+    background-color: #E5010F;
+  }
+  .button-danger:hover {
+    background-color: #CC010D;
   }
   .button-secondary {
-    @apply bg-blue-100 text-blue-600 hover:bg-blue-200;
+    background-color: #E5F2FF;
+    color: #0075BB;
+  }
+  .button-secondary:hover {
+    background-color: #CCE5FF;
   }
   .card {
     @apply p-4 border rounded-md shadow-sm bg-white;
