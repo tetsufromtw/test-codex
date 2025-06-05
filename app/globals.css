@@ -1,3 +1,47 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components {
+  .label {
+    @apply block mb-1 text-sm font-medium text-gray-700;
+  }
+  .input {
+    @apply w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500;
+  }
+  .button {
+    @apply px-4 py-2 rounded-md text-white font-medium inline-flex items-center justify-center;
+  }
+  .button-primary {
+    @apply bg-blue-550 hover:bg-blue-600;
+  }
+  .button-danger {
+    @apply bg-red-550 hover:bg-red-600;
+  }
+  .button-secondary {
+    @apply bg-blue-100 text-blue-600 hover:bg-blue-200;
+  }
+  .card {
+    @apply p-4 border rounded-md shadow-sm bg-white;
+  }
+  .badge {
+    @apply inline-block px-2 py-1 rounded-full text-xs font-medium;
+  }
+  .badge-info {
+    @apply bg-blue-100 text-blue-600;
+  }
+  .badge-success {
+    @apply bg-green-100 text-green-600;
+  }
+  .badge-error {
+    @apply bg-red-100 text-red-600;
+  }
+  .modal-overlay {
+    @apply fixed inset-0 bg-black/50 flex items-center justify-center;
+  }
+  .modal-content {
+    @apply bg-white p-6 rounded-md shadow-lg;
+  }
+}
+
